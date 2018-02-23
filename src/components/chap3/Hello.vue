@@ -10,7 +10,7 @@
 export default {
    data (){
      return {
-       from: 'Rotterdam'
+       //from: 'Rotterdam'
      }
    },
    props: ['firstname', 'lastname', 'from', 'img']

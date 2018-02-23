@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <hello firstname="Lloyd" lastname="Mangitukwa" from="Kinshasa" img="./static/shuri.jpg"></hello>
+      <citizens firstname="Eric" lastname="Salla" age="43 ans"></citizens>
   </div>
 </template>
 
 <script>
-import hello from './components/chap3/Hello.vue'
+//import hello from './components/chap4.2/Hello.vue'
+import citizens from './components/chap4.2/citizens.vue'
 
 export default {
   name: 'App',
   components: {
-    hello
+    citizens
   }
 }
 </script>
