@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-      <citizens firstname="Eric" lastname="Salla" age="43 ans"></citizens>
+      <citizens firstname="Erick" lastname="Salla" age="43 ans"></citizens>
   </div>
 </template>
 
 <script>
 //import hello from './components/chap4.2/Hello.vue'
-import citizens from './components/chap4.2/citizens.vue'
+import citizens from './components/chap5/citizens.vue'
 
 export default {
   name: 'App',

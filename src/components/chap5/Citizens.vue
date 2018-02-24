@@ -6,7 +6,6 @@
             <tr v-for="citizen in citizens">
                 <td>{{citizen.firstname}}</td>
                 <td>{{citizen.lastname}}</td>
-                <td>{{citizen.age}}</td>
             </tr>
         </table>
         <button @click="addCitizens">Ajouter</button><br><br>
@@ -15,13 +14,20 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+  Vue.use(VueResource)
+
   export default{
       data (){
           return{
               citizens: []
           }
       },
-      props:["firstname", "lastname", "age"],
+      http: {
+          root: 'http://localhost:3000'
+      },
+
       methods:{
           addCitizens(){
               this.citizens.push({"firstname":"T'Challa", "lastname":"Of Wakanda", "age":"30"})
@@ -33,8 +39,10 @@
           }
       },
       mounted(){
-          this.citizens.push({
-              "firstname":this.firstname, "lastname":this.lastname, "age":this.age
+          this.$resource('citizens').get().then((response) => {
+              this.citizens = response.data
+          },(response) => {
+              console.log('erreur', response);
           })
       }
   }
