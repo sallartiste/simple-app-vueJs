@@ -46,10 +46,10 @@
   h1{
     color:#c00;
   }
-  table td{
+  /*table td{
       border: 1px solid grey;
       cursor: pointer;
-  }
+  }*/
 
   #citizens{
       display: inline-block;
