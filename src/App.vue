@@ -6,7 +6,7 @@
 
 <script>
 //import hello from './components/chap4.2/Hello.vue'
-import citizens from './pages/chap6/CitizenPage.vue'
+import citizens from './pages/chap7/CitizenPage.vue'
 
 export default {
   name: 'App',
@@ -24,5 +24,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 </style>
